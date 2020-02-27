@@ -9,8 +9,9 @@ var playerSeven = {score : 0}
 var playerEight = {score : 0}
 var playerNine = {score : 0}
 var playerTen = {score : 0}
+var round = 1;
 
-var players = [{playerOne},{playerTwo},{playerThree},{playerFour},{playerFive},{playerSix},{playerSeven},{playerEight},{playerNine},{playerTen}]
+var players = [playerOne,playerTwo,playerThree,playerFour,playerFive,playerSix,playerSeven,playerEight,playerNine,playerTen]
 
 function rollDice(){
     let diceRolls = [Math.floor((Math.random() * 4) + 1), Math.floor((Math.random() * 6) + 1), Math.floor((Math.random() * 8) + 1), Math.floor((Math.random() * 10) + 1),Math.floor((Math.random() * 12) + 1), Math.floor((Math.random() * 20) + 1)]
@@ -31,6 +32,7 @@ function rollTwenty(){
     return finalRoll;
 }
 function commenceRound(){
+    document.getElementById("4").innerHTML = 0;
     if(players.length > 4){
         let i;
         for (i = 0; i < players.length; i++){
@@ -38,6 +40,7 @@ function commenceRound(){
         }
         removePlayer();
         removePlayer();
+        round++;
     }
     if(players.length <= 4 && players.length > 2){
         let i;
@@ -45,6 +48,7 @@ function commenceRound(){
             players[i].score = rollDice();
         }
         removePlayer();
+        round++;
     }
     else{
         let i;
@@ -55,8 +59,8 @@ function commenceRound(){
     }
 }
 function removePlayer(){
-    let lowestPlayer = Math.min(players);
-    players = players.splice(players.indexOf(lowestPlayer));
+    let lowestPlayer = players.sort((a, b) => a.score - b.score)
+    players = players.shift();
     return players;
 }
 function runGame(){
