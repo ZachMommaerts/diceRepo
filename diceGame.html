@@ -2,12 +2,138 @@
 <html lang="en">
 <head>
     <script src="DiceGame.js"></script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="diceGame.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DiceGame</title>
 </head>
 <body>
-    <center><h1>Roll Them Dice Honkey!</h1></center>
+    <center><h1>Roll Them Dice Honkey!</h1>
+    <div id = "Roll"></div>
+    <button onclick="runGame()" href="DiceGame.js">Roll!</button>
+    <div class="row">
+        <div class="column">
+            <div class="dices" id="4"></div>
+        </div>
+        <div class="column">
+            <div class="dices" id="6"></div>
+        </div>
+        <div class="column">
+            <div class="dices" id="8"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="dices" id="10"></div>
+        </div>
+        <div class="column">
+            <div class="dices" id="12"></div>
+        </div>
+        <div class="column">
+            <div class="dices" id="20"></div>
+        </div>
+    </div>
+    <table id="playersandscores">
+        <tr>
+            <th>Players</th>
+            <th>Round One</th>
+            <th>Round Two</th>
+            <th>Round Three</th>
+            <th>Round Four</th>
+            <th>Round Five</th>
+            <th>Round Six</th>
+        </tr>
+        <tr>
+            <td>Your Score</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Opponent One</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Opponent Two</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Opponent Three</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Opponent Four</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Opponent Five</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Opponent Six</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Opponent Seven</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Opponent Eight</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Opponent Nine</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    </center>
 </body>
 </html>
